@@ -1,0 +1,36 @@
+@use "mixins-function";
+@use "colors";
+
+.nav {
+  height: 5rem;
+  width: 100vw;
+  position: fixed;
+//   border-bottom: 1px solid black;
+}
+
+.list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @include mixins-function.contenedor;
+  gap: 3rem;
+
+  &__element {
+    font-size: 1.3rem;
+
+    &--left {
+      margin-right: auto;
+    }
+
+    &--lighter {
+      font-size: 2rem;
+    }
+  }
+
+  &__link {
+    color: colors.$black;
+    font-weight: 500;
+  }
+}

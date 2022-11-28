@@ -1,0 +1,30 @@
+.nav {
+  height: 5rem;
+  width: 100vw;
+  position: fixed;
+}
+
+.list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10rem;
+  gap: 3rem;
+}
+.list__element {
+  font-size: 1.3rem;
+}
+.list__element--left {
+  margin-right: auto;
+}
+.list__element--lighter {
+  font-size: 2rem;
+}
+.list__link {
+  color: #000;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=nav.css.map */

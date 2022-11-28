@@ -1,0 +1,61 @@
+@use 'mixins-function';
+@use 'colors';
+
+.products{
+    
+    @include mixins-function.margin-section;
+    
+    &__title{
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    &__container{
+        @include mixins-function.contenedor;
+        @include mixins-function.init_grid(3, 30%, auto, 5rem);
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        gap: 2rem 0;
+    }
+}
+
+.card{
+    background-color: aqua;
+    display: grid;
+    font-size: .9rem;
+    
+
+    &__image{
+        width: 100%;
+    }
+
+    &__body{
+        display: grid;
+        @include mixins-function.init_grid(2, 1fr, 2, 1fr);
+        grid-template-areas: 
+        'title price'
+        'description price';
+        padding: 1rem;
+    }
+
+    &__price{
+        grid-area: price;
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: colors.$color1;
+        justify-self: center;
+    }
+
+    &__title{
+        grid-area: title;
+    }
+
+    &__description{
+        grid-area: description;
+    }
+}   
+
