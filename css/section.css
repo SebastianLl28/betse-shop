@@ -12,7 +12,7 @@
   padding: 0 10rem;
   display: grid;
   grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(auto, 5rem);
+  grid-template-rows: repeat(auto, 4rem);
   width: 100%;
   height: auto;
   justify-content: space-between;
@@ -20,34 +20,82 @@
 }
 
 .card {
-  background-color: aqua;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   font-size: 0.9rem;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.card__header {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 80%;
+  min-height: 20rem;
+  max-height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__header:hover::after {
+  transform: translateY(0);
+}
+.card__header::after {
+  height: 100%;
+  content: "Agregar";
+  font-size: 2rem;
+  color: #000;
+  text-shadow: 0 0 10px #fff;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(74, 189, 59, 0.555);
+  position: absolute;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card__image {
   width: 100%;
+  z-index: 0;
+}
+.card__image::after {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  background-color: red;
+  display: block;
+  top: 0;
 }
 .card__body {
   display: grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 0.5fr;
   grid-template-areas: "title price" "description price";
-  padding: 1rem;
+  padding: 1rem 2rem;
+  background-color: #f0f0f0;
+  height: 6rem;
+  border-top: 1px solid #000;
 }
 .card__price {
   grid-area: price;
   align-self: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #368550;
-  justify-self: center;
+  justify-self: end;
 }
 .card__title {
   grid-area: title;
+  font-size: 1.4rem;
 }
 .card__description {
   grid-area: description;
+  color: #beb4b4;
 }
 
 /*# sourceMappingURL=section.css.map */

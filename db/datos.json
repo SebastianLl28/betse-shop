@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Cherios",
+        "price": 5,
+        "description": "Cerial de avena inegral",
+        "img": "./img/cerial.png"
+    },
+    {
+        "id": 2,
+        "name": "Camil",
+        "price": 3,
+        "description": "Arroz blanco",
+        "img": "./img/p_arroz.png"
+    },
+    {
+        "id": 3,
+        "name": "Doritos",
+        "price": 6,
+        "description": "Snacks nachos con queso",
+        "img": "./img/p_doritos.png"
+    },
+    {
+        "id": 4,
+        "name": "Napolitano",
+        "price": 2.5,
+        "description": "Helado sabor fresa, chocolate y vainilla",
+        "img": "./img/p_ice_cream.png"
+    },
+    {
+        "id": 5,
+        "name": "Gloria",
+        "price": 2.5,
+        "description": "Leche de vaca",
+        "img": "./img/p_milk.png"
+    },
+    {
+        "id": 6,
+        "name": "Papa Lays",
+        "price": 2.5,
+        "description": "Snacks fritura de papas crocantes",
+        "img": "./img/p_papa_lays.png"
+    },
+    {
+        "id": 7,
+        "name": "Pringles",
+        "price": 4,
+        "description": "Snacks papas pringles original",
+        "img": "./img/p_pringles.png"
+    },
+    {
+        "id": 8,
+        "name": "San Mateo",
+        "price": 8,
+        "description": "Agua pura 100% mineral de manantial",
+        "img": "./img/p_water.png"
+    },
+    {
+        "id": 9,
+        "name": "Uyoo",
+        "price": 2.5,
+        "description": "Yogurt de fresa de la madre Rusia :3",
+        "img": "./img/p_yogurt.png"
+    }
+]

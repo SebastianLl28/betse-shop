@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/header.scss","../sass/_mixins-function.scss","../sass/_colors.scss"],"names":[],"mappings":"AAGA;EACI;EACA;ECAA;EACA;EACA;EAIA;EACA;EACA;EDLA;EACA,OERI;EFSJ","file":"header.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/header.scss","../sass/_mixins-function.scss","../sass/_colors.scss"],"names":[],"mappings":"AAGA;EACI;EACA;ECAA;EACA;EACA;EAIA;EACA;EACA;EDLA;EACA,OERI;EFSJ;EACA;EACA","file":"header.css"}

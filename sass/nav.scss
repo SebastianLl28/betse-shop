@@ -5,7 +5,14 @@
   height: 5rem;
   width: 100vw;
   position: fixed;
-//   border-bottom: 1px solid black;
+  transition: all .5s ease-in-out;
+  @include mixins-function.contenedor;
+  z-index: 1;
+  &-active{
+    background-color: colors.$white;
+    border-bottom: 2px solid colors.$black;
+    height: 4.5rem;
+  }
 }
 
 .list {
@@ -14,11 +21,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @include mixins-function.contenedor;
   gap: 3rem;
 
   &__element {
     font-size: 1.3rem;
+    cursor: pointer;
 
     &--left {
       margin-right: auto;
@@ -34,3 +41,95 @@
     font-weight: 500;
   }
 }
+
+.nav__carrito{
+  width: 30rem;
+  height: 25rem;
+  background-color: colors.$white;
+  border: 2px solid colors.$black;
+  margin-left: auto;
+  border-radius: 10px;
+  transform: translateY(-10px);
+  overflow: scroll;
+  padding: .5rem;
+  display: none;
+  animation: aparecer 2s alternate;
+  transition: all 2s;
+  // z-index: 100;
+
+  &::-webkit-scrollbar{
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb{
+      background-color: rgb(207, 141, 228);
+      border-radius: 5px;
+  }
+
+  &--active{
+    display: block;
+  }
+
+  &--off{
+    height: 0rem;
+  }
+}
+
+@keyframes aparecer {
+  to{
+    height: 25rem;
+  }
+  from{
+    height: 0rem;
+  }
+}
+
+.nav__card{
+  width: 100%;
+  height: 7rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: .5fr 1fr 1fr;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.navCard{
+  &__image{
+   height: inherit;
+  }
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__title{
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  &__price{
+    justify-self: center;
+    align-self: center;
+    font-size: 3rem;
+  }
+}
+
+.result{
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid colors.$black;
+  padding: 0 2rem;
+  font-size: 2rem;
+}
+

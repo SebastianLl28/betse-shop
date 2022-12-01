@@ -4,9 +4,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
+  background: #f2f2f2;
+}
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(207, 141, 228);
+  border-radius: 5px;
 }
 
 a {
