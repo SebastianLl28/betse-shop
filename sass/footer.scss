@@ -1,58 +1,58 @@
-@use 'mixins-function';
-@use 'colors';
+@use "mixins-function";
+@use "colors";
 
-.footer{
-    height: 20rem;
-    width: 100%;
-    background-color: colors.$white;
-    border-top: 2px solid colors.$black;
-    display: grid;
-    grid-template-columns: 1fr .5fr .5fr .5fr;
-    justify-content: space-around;
-    gap: 1rem;
+.footer {
+  height: 20rem;
+  width: 100%;
+  background-color: colors.$white;
+  border-top: 2px solid colors.$black;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+  justify-content: space-around;
+  gap: 1rem;
 
-    @include mixins-function.contenedor;
-    padding: {
-        top: 2rem;
-        bottom: 2rem
-    };
+  @include mixins-function.contenedor;
+  padding: {
+    top: 2rem;
+    bottom: 2rem;
+  }
 
-    &__title{
-        font-size: 2rem;
-    }
+  &__title {
+    font-size: 2rem;
+  }
 
-    &__subtitle{
-        font-weight: 900;
-    }
+  &__subtitle {
+    font-weight: 900;
+  }
 }
 
-.icons{
-    font-size: 2rem;
-    display: flex;
-    gap: 1rem;
+.icons {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
 
-    &__icon{
-        border-radius: 50%;
-        line-height: 3rem !important;
-        text-align: center;
-        width: 3rem;
-        height: 3rem;
-        border: 1px solid #8d8d8d;
-        cursor: pointer;
-        color: #8d8d8d;
+  &__icon {
+    border-radius: 50%;
+    line-height: 3rem !important;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #8d8d8d;
+    cursor: pointer;
+    color: #8d8d8d;
 
-        &--fb:hover{
-            background-color: #1877f2;
-            color: white;
-        }
-        &--tw:hover{
-            background-color: #00ACEE;
-            color: white;
-        }
-
-        &--go:hover{
-            background-color: #E44135;
-            color: white;
-        }
+    &--fb:hover {
+      background-color: #1877f2;
+      color: white;
     }
+    &--tw:hover {
+      background-color: #00acee;
+      color: white;
+    }
+
+    &--go:hover {
+      background-color: #e44135;
+      color: white;
+    }
+  }
 }

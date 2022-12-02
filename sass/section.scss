@@ -1,117 +1,112 @@
-@use 'mixins-function';
-@use 'colors';
+@use "mixins-function";
+@use "colors";
 
-.products{
-    
-    @include mixins-function.margin-section;
-    
+.products {
+  @include mixins-function.margin-section;
 
-    &__title{
-        font-size: 3rem;
-        font-weight: 500;
-        text-align: center;
-        margin: 2rem;
-    }
+  &__title {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 2rem;
+  }
 
-    &__container{
-        @include mixins-function.contenedor;
-        @include mixins-function.init_grid(3, 30%, auto, 4rem);
-        width: 100%;
-        height: auto;
-        justify-content: space-between;
-        gap: 2rem 0;
-    }
+  &__container {
+    @include mixins-function.contenedor;
+    @include mixins-function.init_grid(3, 30%, auto, 4rem);
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    gap: 2rem 0;
+  }
 }
 
-.card{
-    // max-height: 4rem;
+.card {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  background-color: colors.$white;
+  border: 1px solid colors.$black;
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 80%;
+    min-height: 20rem;
+    max-height: 20rem;
+
     display: flex;
-    flex-direction: column;
-    font-size: .9rem;
-    background-color: colors.$white;
-    // border-radius: 10px;
-    border: 1px solid colors.$black;
-
-    &__header{
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        height: 80%;
-        min-height: 20rem;
-        max-height: 20rem;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        //
-        &:hover::after{
-            transform: translateY(0);
-        }
+    align-items: center;
+    justify-content: center;
+    //
+    &:hover::after {
+      transform: translateY(0);
     }
+  }
 
-    &__header::after{
-        height: 100%;
-        content: 'Agregar';
-        font-size: 2rem;
-        color: colors.$black;
-        text-shadow: 0 0 10px #fff;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(74, 189, 59, 0.555);
-        position: absolute;
-        left: 0;
-        transform: translateY(100%);
-        transition: transform 0.5s;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  &__header::after {
+    height: 100%;
+    content: "Agregar";
+    font-size: 2rem;
+    color: colors.$black;
+    text-shadow: 0 0 10px #fff;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(74, 189, 59, 0.555);
+    position: absolute;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s;
 
-    &__image{
-        width: 100%;
-        z-index: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &__image::after{
-        content: '';
-        width: 5rem;
-        height: 5rem;
-        background-color: red;
-        display: block;
-        top: 0;
-    }
+  &__image {
+    width: 100%;
+    z-index: 0;
+  }
 
-    &__body{
-        display: grid;
-        @include mixins-function.init_grid(2, 1fr, 2, 1fr);
-        grid-template-columns: 1fr .5fr;
-        grid-template-areas: 
-        'title price'
-        'description price';
-        padding: 1rem 2rem;
-        background-color: #f0f0f0;
-        height: 6rem;
-        border-top: 1px solid colors.$black;
-    }
+  &__image::after {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    display: block;
+    top: 0;
+  }
 
-    &__price{
-        grid-area: price;
-        align-self: center;
-        font-size: 1.8rem;
-        font-weight: 500;
-        color: colors.$color1;
-        justify-self: end;
-    }
+  &__body {
+    display: grid;
+    @include mixins-function.init_grid(2, 1fr, 2, 1fr);
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas:
+      "title price"
+      "description price";
+    padding: 1rem 2rem;
+    background-color: #f0f0f0;
+    height: 6rem;
+    border-top: 1px solid colors.$black;
+  }
 
-    &__title{
-        grid-area: title;
-        font-size: 1.4rem;
-    }
+  &__price {
+    grid-area: price;
+    align-self: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: colors.$color1;
+    justify-self: end;
+  }
 
-    &__description{
-        grid-area: description;
-        color: #beb4b4;
-    }
-}   
+  &__title {
+    grid-area: title;
+    font-size: 1.4rem;
+  }
 
+  &__description {
+    grid-area: description;
+    color: #beb4b4;
+  }
+}

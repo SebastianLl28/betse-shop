@@ -8,7 +8,8 @@
   transition: all .5s ease-in-out;
   @include mixins-function.contenedor;
   z-index: 1;
-  &-active{
+
+  &-active {
     background-color: colors.$white;
     border-bottom: 2px solid colors.$black;
     height: 4.5rem;
@@ -42,7 +43,7 @@
   }
 }
 
-.nav__carrito{
+.nav__carrito {
   width: 30rem;
   height: 25rem;
   background-color: colors.$white;
@@ -57,34 +58,35 @@
   transition: all 2s;
   // z-index: 100;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     width: 7px;
   }
 
-  &::-webkit-scrollbar-thumb{
-      background-color: rgb(207, 141, 228);
-      border-radius: 5px;
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(207, 141, 228);
+    border-radius: 5px;
   }
 
-  &--active{
+  &--active {
     display: block;
   }
 
-  &--off{
+  &--off {
     height: 0rem;
   }
 }
 
 @keyframes aparecer {
-  to{
+  to {
     height: 25rem;
   }
-  from{
+
+  from {
     height: 0rem;
   }
 }
 
-.nav__card{
+.nav__card {
   width: 100%;
   height: 7rem;
   margin-bottom: 1rem;
@@ -93,35 +95,35 @@
   display: grid;
   grid-template-columns: .5fr 1fr 1fr;
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 }
 
-.navCard{
-  &__image{
-   height: inherit;
+.navCard {
+  &__image {
+    height: inherit;
   }
 
-  &__text{
+  &__text {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
-  &__title{
+  &__title {
     font-size: 1.5rem;
     font-weight: 900;
   }
 
-  &__price{
+  &__price {
     justify-self: center;
     align-self: center;
     font-size: 3rem;
   }
 }
 
-.result{
+.result {
   width: 100%;
   height: 4rem;
   display: flex;
@@ -132,4 +134,3 @@
   padding: 0 2rem;
   font-size: 2rem;
 }
-

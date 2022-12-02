@@ -1,26 +1,26 @@
-@mixin contenedor(){
-    padding: 0 10rem;
+@mixin contenedor() {
+  padding: 0 10rem;
 }
 
-@mixin image($img){
-    background-image: url($img);
-    background-position: center;
-    background-size: cover;
+@mixin image($img) {
+  background-image: url($img);
+  background-position: center;
+  background-size: cover;
 }
 
-@mixin flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin init_grid($column, $column-size, $row, $row-size) {
-    display: grid;
-    grid-template-columns: repeat($column, $column-size);
-    grid-template-rows: repeat($row, $row-size);
+  display: grid;
+  grid-template-columns: repeat($column, $column-size);
+  grid-template-rows: repeat($row, $row-size);
 }
 
 @mixin margin-section {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }

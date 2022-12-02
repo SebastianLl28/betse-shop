@@ -1,32 +1,32 @@
-*{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    background: #f2f2f2;
+body {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  background: #f2f2f2;
 
-    &::-webkit-scrollbar{
-        width: 7px;
-    }
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
 
-    &::-webkit-scrollbar-thumb{
-        background-color: rgb(207, 141, 228);
-        border-radius: 5px;
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(207, 141, 228);
+    border-radius: 5px;
+  }
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
